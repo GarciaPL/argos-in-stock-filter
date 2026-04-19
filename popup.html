@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Argos In-Stock Filter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <div class="toggle-row">
+      <span class="toggle-label">Hide out-of-stock items</span>
+      <label class="switch" aria-label="Toggle filter">
+        <input type="checkbox" id="filter-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <p class="status" id="status">Loading…</p>
+  </main>
+  <footer>Works on argos.co.uk</footer>
+  <script src="config.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
