@@ -38,8 +38,6 @@ Unzip the file somewhere you won't accidentally delete it. A good choice is:
 - **Windows:** `C:\Users\YourName\Documents\argos-filter\`
 - **Mac:** `~/Documents/argos-filter/`
 
-⚠️ **Do NOT leave it in your Downloads folder.** If you clean out Downloads later, the extension will break.
-
 ### Step 3: Open Chrome's extensions page
 
 Type `chrome://extensions` into the address bar and press Enter. (On Edge, use `edge://extensions`.)
@@ -61,7 +59,7 @@ Click the puzzle-piece icon in the Chrome toolbar, find "Argos In-Stock Filter",
 ### Updating to a new version
 
 When a new release is published:
-1. Download the new ZIP from the [releases page](https://github.com/GarciaPL/argos-in-stock-filter/releases)
+1. Download the new ZIP from the [repository](https://github.com/GarciaPL/argos-in-stock-filter)
 2. Extract it, **replacing the old folder** (same location as before)
 3. Go to `chrome://extensions` and click the refresh/reload icon on the Argos In-Stock Filter card
 
