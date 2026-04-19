@@ -1,6 +1,8 @@
 # Argos In-Stock Filter
 
-A Manifest V3 Chrome extension that hides out-of-stock products on [argos.co.uk](https://www.argos.co.uk/).
+Browsing [argos.co.uk](https://www.argos.co.uk/) clearance or sale pages means scrolling past a sea of "Out of stock" items that you can't actually buy. 
+
+This extension removes them instantly — toggle it on and only purchasable products remain, making it far easier to spot genuine deals. Toggle it off at any time to restore the full listing.
 
 ## Features
 
@@ -10,6 +12,17 @@ A Manifest V3 Chrome extension that hides out-of-stock products on [argos.co.uk]
 - **Infinite scroll / SPA aware** — a MutationObserver catches cards injected after initial load; history patching detects client-side navigation.
 - **Zero reload required** — toggling takes effect instantly on all open Argos tabs via `chrome.storage.onChanged`.
 - **No external dependencies** — plain vanilla JS, no build step.
+
+## Screenshots
+
+### Popup — filter active, 26 items hidden
+![Plugin overview](screenshots/plugin_overview.webp)
+
+### Before — out-of-stock items mixed in with available ones
+![Out-of-stock items listed](screenshots/out_of_stock_items_listed.webp)
+
+### After — only in-stock items shown
+![Out-of-stock items hidden](screenshots/out_of_stock_items_delisted.webp)
 
 ## Installing the extension
 
