@@ -26,44 +26,74 @@ This extension removes them instantly — toggle it on and only purchasable prod
 
 ## Installing the extension
 
-This extension is installed directly from source — it has not been published to the Chrome Web Store yet. Installation takes about 2 minutes. No account or payment required. Works on Chrome, Edge, Brave, and other Chromium-based browsers.
+Each [release](https://github.com/GarciaPL/argos-in-stock-filter/releases/latest) ships two ZIPs — one for Chromium-based browsers and one for Firefox:
 
-### Step 1: Download the files
+| File | Browser |
+|---|---|
+| `argos-in-stock-filter-chrome.zip` | Chrome, Edge, Brave, and other Chromium browsers |
+| `argos-in-stock-filter-firefox.zip` | Firefox |
 
-Go to the [latest release](https://github.com/GarciaPL/argos-in-stock-filter/releases/latest) and download the ZIP file from the "Assets" section.
+---
 
-### Step 2: Extract to a permanent location
+### Chrome / Edge / Brave
+
+#### Step 1: Download the files
+
+Go to the [latest release](https://github.com/GarciaPL/argos-in-stock-filter/releases/latest) and download `argos-in-stock-filter-chrome.zip` from the "Assets" section.
+
+#### Step 2: Extract to a permanent location
 
 Unzip the file somewhere you won't accidentally delete it. A good choice is:
 - **Windows:** `C:\Users\YourName\Documents\argos-filter\`
 - **Mac:** `~/Documents/argos-filter/`
 
-### Step 3: Open Chrome's extensions page
+#### Step 3: Open the extensions page
 
 Type `chrome://extensions` into the address bar and press Enter. (On Edge, use `edge://extensions`.)
 
-### Step 4: Enable Developer mode
+#### Step 4: Enable Developer mode
 
 Toggle **Developer mode** ON in the top-right corner. Three new buttons will appear.
 
-### Step 5: Load the extension
+#### Step 5: Load the extension
 
 Click **Load unpacked**, then select the folder you extracted in Step 2 (the one containing `manifest.json`).
 
 The extension appears in your extensions list and the icon appears in the toolbar. Done.
 
-### Step 6: Pin the icon (optional but recommended)
+#### Step 6: Pin the icon (optional but recommended)
 
-Click the puzzle-piece icon in the Chrome toolbar, find "Argos In-Stock Filter", and click the pin icon so it stays visible.
+Click the puzzle-piece icon in the toolbar, find "Argos In-Stock Filter", and click the pin icon so it stays visible.
 
-### Updating to a new version
+#### Updating to a new version
 
 When a new release is published:
-1. Download the new ZIP from the [repository](https://github.com/GarciaPL/argos-in-stock-filter)
+1. Download the new `argos-in-stock-filter-chrome.zip` from the [releases page](https://github.com/GarciaPL/argos-in-stock-filter/releases/latest)
 2. Extract it, **replacing the old folder** (same location as before)
 3. Go to `chrome://extensions` and click the refresh/reload icon on the Argos In-Stock Filter card
 
-Or to avoid manual updates entirely, [install via git](#git-method) — then `git pull` updates the files and you just reload the extension.
+---
+
+### Firefox
+
+#### Step 1: Download the files
+
+Go to the [latest release](https://github.com/GarciaPL/argos-in-stock-filter/releases/latest) and download `argos-in-stock-filter-firefox.zip` from the "Assets" section.
+
+#### Step 2: Open Firefox Add-ons (temporary install)
+
+Firefox does not allow loading unsigned extensions permanently outside of Developer Edition. To install temporarily:
+
+1. Type `about:debugging` into the address bar and press Enter.
+2. Click **This Firefox** in the left sidebar.
+3. Click **Load Temporary Add-on...**.
+4. Extract the ZIP, then navigate to the extracted folder and select `manifest.json`.
+
+The extension loads immediately. Note: temporary installs are removed when Firefox restarts.
+
+#### Updating to a new version
+
+Download the new `argos-in-stock-filter-firefox.zip` from the [releases page](https://github.com/GarciaPL/argos-in-stock-filter/releases/latest) and repeat the install steps above.
 
 
 ## How it works
@@ -96,7 +126,8 @@ Runs on every `https://www.argos.co.uk/*` page.
 
 | File | Purpose |
 |---|---|
-| `manifest.json` | Extension manifest (MV3) |
+| `manifest.chrome.json` | Extension manifest for Chrome/Chromium (MV3) |
+| `manifest.firefox.json` | Extension manifest for Firefox (MV3 + gecko id) |
 | `content.js` | DOM filtering logic |
 | `background.js` | Service worker — icon, badge, storage |
 | `popup.html/js/css` | Toolbar popup UI |
