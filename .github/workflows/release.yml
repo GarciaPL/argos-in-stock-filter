@@ -1,0 +1,31 @@
+name: Build and attach extension zips
+
+on:
+  release:
+    types: [created]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Make build script executable
+        run: chmod +x build.sh
+
+      - name: Build Chrome zip
+        run: ./build.sh chrome
+
+      - name: Build Firefox zip
+        run: ./build.sh firefox
+
+      - name: Attach zips to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/argos-in-stock-filter-chrome.zip
+            dist/argos-in-stock-filter-firefox.zip
