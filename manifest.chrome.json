@@ -3,7 +3,7 @@
   "name": "Argos In-Stock Filter",
   "version": "1.0.1",
   "description": "Hides out-of-stock products on argos.co.uk",
-  "permissions": ["storage", "activeTab"],
+  "permissions": ["storage", "activeTab", "tabs"],
   "host_permissions": ["https://www.argos.co.uk/*"],
   "background": {
     "service_worker": "background.js"
