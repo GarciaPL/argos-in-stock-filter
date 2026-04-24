@@ -12,7 +12,7 @@
     "gecko": {
       "id": "argos-in-stock-filter@extension",
       "data_collection_permissions": {
-        "required": [],
+        "required": ["none"],
         "optional": []
       }
     }
